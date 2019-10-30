@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form Validator</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="library/css/style.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <form action="#" method="post">
+                <div class="row">
+                    <div class="col-1-of-2">
+                        <div class="form_group">
+                            <label for="first_name">First Name: <sup>*</sup></label>
+                            <input type="text" name="first_name" placeholder="Enter First Name" class="required">
+                            <div class="error first_name"></div>
+                        </div>
+                    </div>
+                    <div class="col-1-of-2">
+                        <div class="form_group">
+                            <label for="last_name">Last Name: <sup>*</sup></label>
+                            <input type="text" name="last_name" placeholder="Enter Last Name" class="required">
+                            <div class="error last_name"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-1-of-2">
+                        <div class="form_group">
+                            <label for="phone">Phone: <sup>*</sup></label>
+                            <input type="tel" name="phone" placeholder="Enter Phone Number" class="required">
+                            <div class="error phone"></div>
+                        </div>
+                    </div>
+                    <div class="col-1-of-2">
+                        <div class="form_group">
+                            <label for="email">Email: <sup>*</sup></label>
+                            <input type="email" name="email" placeholder="Enter Email" class="required">
+                            <div class="error email"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <input type="submit" value="SUBMIT">
+                </div>
+            </form>
+        </div>
+    </main>
+    <script type="text/javascript" src="library/js/scripts.js"></script>
+</body>
+</html>
