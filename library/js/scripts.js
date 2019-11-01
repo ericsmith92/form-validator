@@ -4,7 +4,6 @@ function pageLoaded(){
     const formFields = document.querySelectorAll('.required');
     const errorFields = [...document.querySelectorAll('.error')];
 
-
     const formToJSON = elements => {
         const formData = {};
         const formElements = [...elements];
@@ -75,17 +74,9 @@ function pageLoaded(){
         if(checkIfEmpty(this.value)){
            this.nextSibling.nextSibling.textContent = 'Error, field required';
         }else if(this.name === 'phone'){
-            if(!checkRegex('phone', this.value)){
-                this.nextSibling.nextSibling.textContent = 'Error, invalid phone';
-            }else{
-                this.nextSibling.nextSibling.textContent = '';
-            }
+            !checkRegex('phone', this.value) ? this.nextSibling.nextSibling.textContent = 'Error, invalid phone' : this.nextSibling.nextSibling.textContent = '';
         }else if(this.name === 'email'){
-            if(!checkRegex('email', this.value)){
-                this.nextSibling.nextSibling.textContent = 'Error, invalid email';
-            }else{
-                this.nextSibling.nextSibling.textContent = '';
-            }
+            !checkRegex('email', this.value) ? this.nextSibling.nextSibling.textContent = 'Error, invalid email' : this.nextSibling.nextSibling.textContent = '';
         }else{
             this.nextSibling.nextSibling.textContent = '';
         }
