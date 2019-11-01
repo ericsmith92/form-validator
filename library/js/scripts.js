@@ -16,7 +16,7 @@ function pageLoaded(){
         return formData;
      }
 
-    const checkIfEmpty = value => value === '';
+    const checkIfEmpty = value => value.trim() === '';
 
     const checkRegex = (inputType, value)=> {
         const phoneRegEx = /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/;
